@@ -27,6 +27,10 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
   constructor(private svc: EmployeeService, private router: Router) {}
 
   ngOnInit(): void {
+    console.log('EmployeeListComponent: entraste en ngOnInit');
+    this.svc.employeeAdded.subscribe(employee => {
+      console.log('Nuevo empleado agregado: ', employee)
+    })
     this.sub = this.svc.watch().subscribe(list => {
       this.employees = list;
       this.loading = false;
@@ -43,11 +47,12 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
 
 
   goToForm() {
-    this.router.navigate(['/employees/create']);
+    this.router.navigate(['/create']);
   }
 
 
   ngOnDestroy(): void {
+    console.log('EmployeeListComponent: hola desde ngOnDestroy')
     this.sub?.unsubscribe();
   }
 }

@@ -3,22 +3,20 @@ import { EmployeeListComponent } from './features/employees/pages/employee-list/
 import { EmployeeFormComponent } from './features/employees/pages/employee-form/employee-form.component';
 
 export const routes: Routes = [
+
+  {
+    path: 'employees',
+    loadComponent: () =>
+      import('./features/employees/pages/employee-list/employee-list.component').then(m => m.EmployeeListComponent),
+  },
+  {
+    path: 'create',
+    loadComponent: () =>
+      import('./features/employees/pages/employee-form/employee-form.component').then(m => m.EmployeeFormComponent),
+  },
   {
     path: '',
     redirectTo: 'employees',
     pathMatch: 'full'
-  },
-  {
-    path: 'employees',
-    children: [
-      {
-        path: '',
-        component: EmployeeListComponent
-      },
-      {
-        path: 'create',
-        component: EmployeeFormComponent
-      }
-    ]
   }
 ];

@@ -3,13 +3,14 @@ import { Employee } from "../../../../core/models/employee.model";
 import { CommonModule } from "@angular/common";
 import { StatusLabelPipe } from "../../../../shared/pipes/status-label.pipe";
 import { StatusEmployeePipe } from "../../../../shared/pipes/status-employee.pipe";
+import { HoverHighlightDirective } from "../../../../shared/directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-employee-card',
   standalone: true,
-  imports: [CommonModule, StatusLabelPipe, StatusEmployeePipe ],
+  imports: [CommonModule, StatusLabelPipe, StatusEmployeePipe, HoverHighlightDirective ],
   template: `
-  <article class="card" [ngClass]="employee.active | statusEmployee" appHoverHighlidht>
+  <article class="card" [ngClass]="employee.active | statusEmployee" appHoverHighlight>
     <div class="card-top">
       <div class="avatar">{{ initials }}</div>
       <div class="meta">
