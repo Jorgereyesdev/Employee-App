@@ -1,6 +1,6 @@
 # 📋 Employees App
 
-Aplicación desarrollada en Angular para la gestión de empleados. Incluye un servidor simulado con json-server para pruebas de backend.
+Aplicación desarrollada en Angular para gestionar empleados. Incluye un servidor simulado con json-server para pruebas de backend.
 
 # 🚀 Requisitos previos
 Antes de iniciar el proyecto asegurate de tener instalado lo siguiente:
