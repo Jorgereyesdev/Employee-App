@@ -1,0 +1,9 @@
+.form-page { padding: 16px; max-width: 720px; }
+label { display: block; margin-bottom: 8px; }
+input, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+.inline { display: flex; align-items: center; gap: 8px; }
+.actions { margin-top: 12px; display: flex; gap: 8px; }
+button { padding: 8px 12px; border-radius: 6px; border: none; cursor: pointer; }
+button.secondary { background: #eee; color: #333; }
+button[disabled] { opacity: 0.6; cursor: not-allowed; }
+.error { color: #d32f2f; font-size: 13px; margin-bottom: 6px;}

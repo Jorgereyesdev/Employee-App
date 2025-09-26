@@ -1,0 +1,45 @@
+<section class="form-page">
+  <h2>Agregar empleado</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <label>
+      Nombre Completo
+      <input formControlName="fullName">
+    </label>
+
+
+    <div class="error" *ngIf="form.get('fullName')?.invalid && form.get('fullName')?.touched">
+      Nombre mínimo 3 caracteres.
+    </div>
+
+
+    <label>
+      Email
+      <input formControlName="email">
+    </label>
+
+    <div class="error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+      Email no válido.
+    </div>
+
+
+    <label>
+      Rol
+      <select formControlName="role">
+        <option value="DEV">DEV</option>
+        <option value="QA">QA</option>
+        <option value="PM">PM</option>
+        <option value="UX">UX</option>
+      </select>
+    </label>
+
+    <label class="inline">
+      <input type="checkbox" formControlName="active"> Activo
+    </label>
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">Guardar</button>
+
+      <button type="button" class="secondary" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</section>

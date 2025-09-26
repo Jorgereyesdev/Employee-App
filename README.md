@@ -1,59 +1,41 @@
-# EmployeesApp
+# 📋 Employees App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.17.
+Aplicación desarrollada en Angular para la gestión de empleados. Incluye un servidor simulado con json-server para pruebas de backend.
 
-## Development server
+# 🚀 Requisitos previos
+Antes de iniciar el proyecto asegurate de tener instalado lo siguiente:
 
-To start a local development server, run:
+- Node.js (versión recomendada: ≥ 18.x)
+- Angular CLI:
 
-```bash
-ng serve
-```
+## Comandos de instalación de Angular
+- npm install -g @angular/cli
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Instalación
+Clona el repositorio y ejecuta:
+- npm install
 
-## Code scaffolding
+# Inicia el Backend simulado
+Para ejecutar el json-server ejecuta:
+- npm run json-server
+Esto levantará un servidor en http://localhost:3000 usando el archivo db.json como base de datos.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Inicia La Aplicación Angular
+Para iniciar la aplicación Angular en modo desarrollo:
+- npm start
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Estructura Del Proyecto
+employees-app/
+├── src/
+│   └── app/
+│       ├── core/
+│       │   ├── models/
+│       │   └── services/
+│       ├── features/
+│       │   ├── pages/
+│       │   └── components/
+│       └── shared/
+│           └── pipe/
+├── db.json
+├── package.json
+└── README.md
